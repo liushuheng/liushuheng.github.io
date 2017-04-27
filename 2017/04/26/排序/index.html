@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/26/排序/index.html">
 <meta property="og:site_name" content="carey">
 <meta property="og:description" content="算法老是看了后面的忘了前面的，脑壳疼 还是写个总结，记下来，没空多翻翻吧== 目前学了的排序（sort）总共有七种：直接插入排序、简单选择排序、冒泡排序、希尔排序、堆排序、快速排序和归并排序 前面三种看名字就比较傻，属于简单算法，后面四种属于改进算法 从操作来分类的话，直接插入和希尔排序都属于插入排序，简单选择和堆排序都属于选择排序，冒泡和快速排序都属于交换排序，归并排序单属归并排序 前面三种大概">
-<meta property="og:updated_time" content="2017-04-27T07:49:17.021Z">
+<meta property="og:updated_time" content="2017-04-27T07:55:40.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法总结">
 <meta name="twitter:description" content="算法老是看了后面的忘了前面的，脑壳疼 还是写个总结，记下来，没空多翻翻吧== 目前学了的排序（sort）总共有七种：直接插入排序、简单选择排序、冒泡排序、希尔排序、堆排序、快速排序和归并排序 前面三种看名字就比较傻，属于简单算法，后面四种属于改进算法 从操作来分类的话，直接插入和希尔排序都属于插入排序，简单选择和堆排序都属于选择排序，冒泡和快速排序都属于交换排序，归并排序单属归并排序 前面三种大概">
@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -109,9 +109,9 @@ a[j+1]=a[0];`
 <hr>
 <p><strong>冒泡排序(Bubble Sort)</strong>：两两比较相邻记录的关键字，如果反序则交换， 知道没有反序为止。排序中可以加入flag作为标记对算法进行优化，可以避免重复循环判断已经排好序的序列。</p>
 <hr>
-<p>简单算法说完了，现在来看下改进算法</p>
+<p>OK简单算法复习完了 (」゜ロ゜)」</p>
 <p><strong>改进算法和简单算法的区别就是，前面三种基础算法的时间复杂度都是n的平方，而改进算法突破了这一限制，提升到了O(nlogn)</strong></p>
-<p><strong>希尔排序(Shell Sort)</strong>  希尔排序是突破n的平方这个时间复杂度的第一批算法（所以这就是只有希尔算法是以人民命名的算法的原因吗哈哈）</p>
+<p><strong>希尔排序(Shell Sort)</strong>  希尔排序是突破n的平方这个时间复杂度的第一批算法（所以这就是只有希尔算法是以人名命名的算法的原因吗哈哈）</p>
 <p>希尔排序可以说是直接插入排序的升级版，其思路是使数组中任意间隔为h的元素都是有序的。实现方法就是将相距h的元素组成一个子序列，在子序列内分别进行直接插入排序。然后再递减h，循环直到h=1，排序完成。</p>
 <p>代码如下</p>
 <pre><code>public class Shell
@@ -273,7 +273,7 @@ L-&gt;r[s]=temp; /* 插入 */
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/26/排序/" data-id="cj20408f00000dsw3byqirjvg" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/04/26/排序/" data-id="cj2047jwy00003sw39vgxwv9y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-、-数据结构/">算法 、 数据结构</a></li></ul>
@@ -285,7 +285,7 @@ L-&gt;r[s]=temp; /* 插入 */
 <nav id="article-nav">
   
     <a href="/2017/04/25/第一篇/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           YESTERDAY YOU SAID TOMORROW
@@ -308,7 +308,7 @@ L-&gt;r[s]=temp; /* 插入 */
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/later-equals-never/">later equals never</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法-、-数据结构/">算法 、 数据结构</a></li></ul>
     </div>
@@ -318,7 +318,7 @@ L-&gt;r[s]=temp; /* 插入 */
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/later-equals-never/" style="font-size: 10px;">later equals never</a> <a href="/tags/算法-、-数据结构/" style="font-size: 10px;">算法 、 数据结构</a>
     </div>
@@ -337,7 +337,7 @@ L-&gt;r[s]=temp; /* 插入 */
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -366,7 +366,7 @@ L-&gt;r[s]=temp; /* 插入 */
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 liushuheng<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
