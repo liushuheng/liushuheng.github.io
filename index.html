@@ -61,6 +61,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-leetcode 0509" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/10/leetcode 0509/" class="article-date">
+  <time datetime="2017-05-09T16:13:58.000Z" itemprop="datePublished">2017-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/10/leetcode 0509/">leetcode题目 5.9</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 Q:Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>A:</p>
+<pre><code>public class Solution {
+public int[] twoSum(int[] nums, int target) 
+ {
+    for(int i=0;i&lt;=nums.length-1;i++){
+     for(int j=0;j&lt;=sums.length-1;j++)
+    { if a[j]==target-a[i]&amp;&amp;a[j]!=a[i];
+      return {i,j};
+
+    }
+</code></pre><p>2 Q:You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>A.</p>
+<pre><code>public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+ListNode dummyHead = new ListNode(0);
+ListNode p = l1, q = l2, curr = dummyHead;
+int carry = 0;
+while (p != null || q != null) {
+    int x = (p != null) ? p.val : 0;
+    int y = (q != null) ? q.val : 0;
+    int sum = carry + x + y;
+    carry = sum / 10;
+    curr.next = new ListNode(sum % 10);
+    curr = curr.next;
+    if (p != null) p = p.next;
+    if (q != null) q = q.next;
+}
+if (carry &gt; 0) {
+    curr.next = new ListNode(carry);
+}
+return dummyHead.next;
+}
+</code></pre><p>算法很简单，想做成完整的程序就会发现各种错误==</p>
+<p>第一个就是 curr.next = new ListNode(sum % 10);</p>
+<p>curr.next本质是一个Node 而右边是ListNode 直接赋值会报错</p>
+<p>然后输入数组 如何转化成NodeList的方法 还没弄好 还是太菜了</p>
+<p>十二点了 睡觉  明天再弄吧 实在不行就去网上抄一个现成的NodeList  程序猿的事  能叫抄袭么 ^_^</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/10/leetcode 0509/" data-id="cj2hreotc0007hsw313yfdpwz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-、-数据结构/">算法 、 数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-排序" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/26/排序/" class="article-date">
@@ -270,7 +347,7 @@ L-&gt;r[s]=temp; /* 插入 */
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/26/排序/" data-id="cj205nvph00028gw3teja0tei" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/26/排序/" data-id="cj2hreoss0002hsw3hv6gjxua" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-、-数据结构/">算法 、 数据结构</a></li></ul>
@@ -335,7 +412,7 @@ L-&gt;r[s]=temp; /* 插入 */
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/25/第一篇/" data-id="cj205nvpe00018gw3y01a051v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/25/第一篇/" data-id="cj2hreosq0001hsw36ltdj9g1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/later-equals-never/">later equals never</a></li></ul>
@@ -382,7 +459,7 @@ L-&gt;r[s]=temp; /* 插入 */
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/14/hello-world/" data-id="cj205nvp800008gw30rmdp9j6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/14/hello-world/" data-id="cj2hreosl0000hsw3srdjap65" class="article-share-link">Share</a>
       
       
     </footer>
@@ -414,7 +491,7 @@ L-&gt;r[s]=temp; /* 插入 */
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/later-equals-never/" style="font-size: 10px;">later equals never</a> <a href="/tags/算法-、-数据结构/" style="font-size: 10px;">算法 、 数据结构</a>
+      <a href="/tags/later-equals-never/" style="font-size: 10px;">later equals never</a> <a href="/tags/算法-、-数据结构/" style="font-size: 20px;">算法 、 数据结构</a>
     </div>
   </div>
 
@@ -423,7 +500,7 @@ L-&gt;r[s]=temp; /* 插入 */
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
   </div>
 
@@ -434,6 +511,10 @@ L-&gt;r[s]=temp; /* 插入 */
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/10/leetcode 0509/">leetcode题目 5.9</a>
+          </li>
         
           <li>
             <a href="/2017/04/26/排序/">排序算法总结</a>

@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 算法 、 数据结构 | carey</title>
+  <title>leetcode题目 5.9 | carey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="carey">
-<meta property="og:url" content="http://yoursite.com/tags/算法-、-数据结构/index.html">
+  <meta name="description" content="1 Q:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the sa">
+<meta name="keywords" content="算法 、 数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode题目 5.9">
+<meta property="og:url" content="http://yoursite.com/2017/05/10/leetcode 0509/index.html">
 <meta property="og:site_name" content="carey">
+<meta property="og:description" content="1 Q:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the sa">
+<meta property="og:updated_time" content="2017-05-09T16:16:46.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="carey">
+<meta name="twitter:title" content="leetcode题目 5.9">
+<meta name="twitter:description" content="1 Q:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the sa">
   
     <link rel="alternate" href="/atom.xml" title="carey" type="application/atom+xml">
   
@@ -59,58 +64,96 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/05/10/leetcode 0509/" class="archive-article-date">
-  <time datetime="2017-05-09T16:13:58.000Z" itemprop="datePublished">May 10</time>
+        <section id="main"><article id="post-leetcode 0509" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/10/leetcode 0509/" class="article-date">
+  <time datetime="2017-05-09T16:13:58.000Z" itemprop="datePublished">2017-05-10</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/10/leetcode 0509/">leetcode题目 5.9</a>
+    <h1 class="article-title" itemprop="name">
+      leetcode题目 5.9
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/26/排序/" class="archive-article-date">
-  <time datetime="2017-04-26T13:26:17.000Z" itemprop="datePublished">Apr 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/排序/">排序算法总结</a>
-    </h1>
-  
+        <p>1 Q:Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>A:</p>
+<pre><code>public class Solution {
+public int[] twoSum(int[] nums, int target) 
+ {
+    for(int i=0;i&lt;=nums.length-1;i++){
+     for(int j=0;j&lt;=sums.length-1;j++)
+    { if a[j]==target-a[i]&amp;&amp;a[j]!=a[i];
+      return {i,j};
 
-    </header>
+    }
+</code></pre><p>2 Q:You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>A.</p>
+<pre><code>public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+ListNode dummyHead = new ListNode(0);
+ListNode p = l1, q = l2, curr = dummyHead;
+int carry = 0;
+while (p != null || q != null) {
+    int x = (p != null) ? p.val : 0;
+    int y = (q != null) ? q.val : 0;
+    int sum = carry + x + y;
+    carry = sum / 10;
+    curr.next = new ListNode(sum % 10);
+    curr = curr.next;
+    if (p != null) p = p.next;
+    if (q != null) q = q.next;
+}
+if (carry &gt; 0) {
+    curr.next = new ListNode(carry);
+}
+return dummyHead.next;
+}
+</code></pre><p>算法很简单，想做成完整的程序就会发现各种错误==</p>
+<p>第一个就是 curr.next = new ListNode(sum % 10);</p>
+<p>curr.next本质是一个Node 而右边是ListNode 直接赋值会报错</p>
+<p>然后输入数组 如何转化成NodeList的方法 还没弄好 还是太菜了</p>
+<p>十二点了 睡觉  明天再弄吧 实在不行就去网上抄一个现成的NodeList  程序猿的事  能叫抄袭么 ^_^</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/10/leetcode 0509/" data-id="cj2hreotc0007hsw313yfdpwz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-、-数据结构/">算法 、 数据结构</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/26/排序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          排序算法总结
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
